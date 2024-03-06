@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform ">
+        <label for="name">Name</label>
+        <input type="text " name="Name" >
+        <label for="name">email</label>
+        <input type="email " name="email" >
+        <input type="submit" value="submit" onclick="return(validation());">
+    </form>
+    <script>
+  function validation()
+  {
+    if(document.myforms.Name.value)
+    {
+        alert("provide a something");
+        Document.myforms.Name.focus();
+        return false
+
+    }
+    if(document.myforms.email.value)
+    {
+        alert("provide a something");
+        Document.myforms.email.focus();
+        return false
+
+    }
+    var EmailId =document.myforms.email.value;
+    atpos = EmailId.indexof('@');
+    atdot = EmailId.lastindexof(".");
+    if(atpos >1 ||(atdot - atpos -2))
+    {
+        alert("provide a something");
+        Document.myforms.email.focus();
+        return false
+    }
+return(true)
+  }
+    </script>
+</body>
+</html>
